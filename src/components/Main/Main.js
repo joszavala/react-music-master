@@ -1,13 +1,13 @@
 import React, {Component} from 'react';
 import Aux from '../../hoc/Aux/Aux';
+import SearchArtist from '../SearchArtist/SearchArtist';
 
 class Main extends Component {
-    render(){
-
+    render() {
         return (
-            <div className="row">
-                
-            </div>
+            <Aux>
+                <SearchArtist />
+            </Aux>
         );
     }
 }
