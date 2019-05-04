@@ -3,3 +3,17 @@ body {
 
 nav {
   background-color: #000000; }
+
+.track img {
+  width: 95%;
+  border: solid 1px #000000; }
+
+.audioCtrls {
+  position: relative !important;
+  float: none !important;
+  bottom: 140px;
+  z-index: 21;
+  left: 0px !important;
+  font-size: 20px; }
+  .audioCtrls i {
+    cursor: pointer; }

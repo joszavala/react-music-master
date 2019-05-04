@@ -1,12 +1,38 @@
 import React from 'react';
+import IconElement from '../../UI/Icon/Icon';
 import Aux from '../../../hoc/Aux/Aux';
 
 const track = (props) => (
     <Aux>
-        <div col s12 m3 l3>
+        <div className="track col s12 m3 l3">
             <div className="row">
-                <img href={props.track.album.images[1]} className="responsive-img" />
+                <div className="col s12 m12 l12">
+                    <img src={props.albumImage} className="circle responsive-img" alt={`${props.albumTitle} - ${props.trackTitle}`} />
+                </div>
+                <div className="audioCtrls col s12 m12 l12">
+                    <IconElement 
+                        iconSize={'medium'}
+                        isHidden={true}
+                        iconName = "pause_circle_outline"
+                        audio = {props.onClick(props.previewUrl)}
+                    />
+
+                    <IconElement 
+                        iconSize={'medium'}
+                        isHidden={false}
+                        iconName = "play_circle_outline"
+                        audio = {props.onClick(props.previewUrl)}
+                    />
+                    
+                </div>
             </div>
+            <div className="row">
+                {props.albumTitle}
+            </div>
+            <div className="row">
+                {props.trackTitle}
+            </div>
+            
         </div>
     </Aux>
 );
