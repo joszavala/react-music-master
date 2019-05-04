@@ -32,7 +32,8 @@ class Tracks extends Component {
     }
 
     render() {
-        const allTracks = this.props.tracks.map(track => {
+        const allTracks = this.props.tracks.map((track, index) => {
+            console.log('track preview', track.preview_url);
             return (<Track 
                         key = {track.id}
                         albumImage = {track.album.images[1].url}
@@ -41,9 +42,11 @@ class Tracks extends Component {
                         trackDuration = {track.duration}
                         previewUrl = {track.preview_url}
                         onClick = {this.playAudio}
-                   />);
+                   />
+            );
         });
-
+        
+        
         return (
             <Aux>
                 <div className="row">

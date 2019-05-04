@@ -28,7 +28,7 @@ class SearchArtist extends Component {
     }
 
     hanldeKeyPress = (event) => {
-        if (event.key == 'Enter') {
+        if (event.key === 'Enter') {
             this.findArtist();
         }
     }

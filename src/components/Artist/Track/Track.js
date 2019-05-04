@@ -13,14 +13,19 @@ const track = (props) => (
                     <IconElement 
                         iconSize={'medium'}
                         isHidden={true}
-                        iconName = "pause_circle_outline"
+                        iconName = "pause_circle_filled"
                         audio = {props.onClick(props.previewUrl)}
                     />
-
                     <IconElement 
                         iconSize={'medium'}
-                        isHidden={false}
-                        iconName = "play_circle_outline"
+                        isHidden={props.previewUrl !== null ? true : false}
+                        iconName = "remove_circle"
+                        audio = {null}
+                    />
+                    <IconElement 
+                        iconSize={'medium'}
+                        isHidden={props.previewUrl === null ? true : false }
+                        iconName = "play_circle_filled"
                         audio = {props.onClick(props.previewUrl)}
                     />
                     
